@@ -1,4 +1,4 @@
-# ✨ PND（CVPR 2026 Accept）
+# ✨ PND（CVPR Main 2026 Accept）🎉🎉🎉🎉🎉🎉🎉
 
 ## **Breaking the Illusion: When Positive Meets Negative in Multimodal Decoding**
 
