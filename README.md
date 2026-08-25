@@ -1,6 +1,6 @@
-# PND
+# PND: Breaking the Illusion: When Positive Meets Negative in Multimodal Decoding
 
-Official implementation of **PND**, accepted at **CVPR 2026**.
+Official implementation of **Breaking the Illusion: When Positive Meets Negative in Multimodal Decoding**, accepted at **CVPR 2026**.
 
 PND reduces object hallucination in multimodal large language models through contrastive decoding over the original image, a positively augmented image, and a negatively augmented image. The release includes adapters for LLaVA, Qwen-VL, Qwen3-VL, and InternVL, together with POPE evaluation outputs.
 
