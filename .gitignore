@@ -1,0 +1,23 @@
+# Python bytecode may embed local source paths and usernames.
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local environments and caches.
+.venv/
+venv/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Experiment trackers and local logs.
+wandb/
+runs/
+*.log
+
+# Editor and operating-system metadata.
+.DS_Store
+._*
+.idea/
+.vscode/
