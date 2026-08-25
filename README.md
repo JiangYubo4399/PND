@@ -2,7 +2,7 @@
 
 Official implementation of **Breaking the Illusion: When Positive Meets Negative in Multimodal Decoding**, accepted at **CVPR 2026**.
 
-PND reduces object hallucination in multimodal large language models through contrastive decoding over the original image, a positively augmented image, and a negatively augmented image. The release includes adapters for LLaVA, Qwen-VL, Qwen3-VL, and InternVL, together with POPE evaluation outputs.
+PND reduces object hallucination in multimodal large language models through contrastive decoding over the original image, a positively augmented image, and a negatively augmented image. The release includes adapters for LLaVA, Qwen-VL, Qwen3-VL, and InternVL.
 
 ## Method overview
 
@@ -24,7 +24,6 @@ code/
 ├── Qwen_VL/      # Qwen-VL model integration
 ├── InternVL/     # InternVL model integration
 └── lavis/        # BLIP/LAVIS components used for image-text attention
-result/            # Released POPE evaluation outputs
 ```
 
 ## Environment
@@ -48,7 +47,7 @@ python code/script/run_llava.py \
   --model-path /path/to/llava-v1.5-7b \
   --image-folder /path/to/coco/val2014 \
   --question-file /path/to/coco_pope_adversarial.json \
-  --answers-file result/llava_pnd.jsonl \
+  --answers-file outputs/llava_pnd.jsonl \
   --alpha 2.2 --beta 0.4 --gamma 0.4
 ```
 
@@ -59,7 +58,7 @@ python code/script/run_qwen3vl.py \
   --model-path /path/to/Qwen3-VL-2B-Instruct \
   --image-folder /path/to/coco/val2014 \
   --question-file /path/to/coco_pope_adversarial.json \
-  --answers-file result/qwen3vl_pnd.jsonl \
+  --answers-file outputs/qwen3vl_pnd.jsonl \
   --use_pnd --use_negative_aug \
   --alpha 2.2 --beta 0.4 --gamma 0.4
 ```
@@ -71,13 +70,9 @@ python code/script/run_internvl_pope.py \
   --model-path /path/to/InternVL2-2B \
   --image-folder /path/to/coco/val2014 \
   --question-file /path/to/coco_pope_adversarial.json \
-  --answers-file result/internvl_pnd.jsonl \
+  --answers-file outputs/internvl_pnd.jsonl \
   --alpha 2.2 --beta 0.4 --gamma 0.4
 ```
-
-## Released results
-
-The `result/` directory contains outputs for multiple backbones and POPE splits, including random, popular, and adversarial settings. Files ending in `_pnd` contain PND decoding results; corresponding original-model outputs are included where available.
 
 ## Acknowledgements
 
